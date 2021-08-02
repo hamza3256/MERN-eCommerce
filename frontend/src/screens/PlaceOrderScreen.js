@@ -11,6 +11,12 @@ const PlaceOrderScreen = ({ history }) => {
 
   const cart = useSelector((state) => state.cart);
 
+  if (!cart.shippingAddress.address) {
+    history.push('/shipping');
+  } else if (!cart.paymentMethod) {
+    history.push('/payment');
+  }
+
   const addDecimals = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2);
   };
@@ -19,7 +25,7 @@ const PlaceOrderScreen = ({ history }) => {
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
 
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
+  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 5);
 
   cart.taxPrice = addDecimals(Number((0.2 * cart.itemsPrice).toFixed(2)));
 
@@ -36,7 +42,7 @@ const PlaceOrderScreen = ({ history }) => {
     if (success) {
       history.push(`/order/${order._id}`);
     }
-    // =====eslint-disable-next-line
+    // eslint-disable-next-line
   }, [history, success]);
 
   const placeOrderHandler = () => {
@@ -64,7 +70,8 @@ const PlaceOrderScreen = ({ history }) => {
               <p>
                 <strong>Address: </strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city},{' '}
-                {cart.shippingAddress.postcode}, {cart.shippingAddress.country}
+                {cart.shippingAddress.postcode}, ,{' '}
+                {cart.shippingAddress.country}
               </p>
             </ListGroup.Item>
             <ListGroup.Item>
