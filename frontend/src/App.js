@@ -27,9 +27,9 @@ function App() {
           <Route path='/shipping' component={ShippingScreen} />
           <Route path='/payment' component={PaymentScreen} />
           <Route path='/placeorder' component={PlaceOrderScreen} />
+          <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/order/:id' component={OrderScreen} />
           <Route path='/product/:id' component={ProductScreen} />
-          <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/admin/userList' component={UserListScreen} />
           <Route path='/' component={HomeScreen} exact />
         </Container>
