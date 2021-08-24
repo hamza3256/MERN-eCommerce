@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Table, Form, Button, Row, Col } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import Message from '../components/Message';
-import Loader from '../components/Loader';
-import { getUserDetails, updateUserProfile } from '../actions/userActions';
-import { listMyOrders } from '../actions/orderActions';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { useState, useEffect } from "react";
+import { Table, Form, Button, Row, Col } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import Message from "../components/Message";
+import Loader from "../components/Loader";
+import { getUserDetails, updateUserProfile } from "../actions/userActions";
+import { listMyOrders } from "../actions/orderActions";
+import { LinkContainer } from "react-router-bootstrap";
 
 const ProfileScreen = ({ history, location }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState(null);
 
   const dispatch = useDispatch();
@@ -30,10 +30,10 @@ const ProfileScreen = ({ history, location }) => {
 
   useEffect(() => {
     if (!userInfo) {
-      history.push('/login');
+      history.push("/login");
     } else {
       if (!user.name) {
-        dispatch(getUserDetails('profile'));
+        dispatch(getUserDetails("profile"));
         dispatch(listMyOrders());
       } else {
         //console.log(user.name);
@@ -47,7 +47,7 @@ const ProfileScreen = ({ history, location }) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setMessage('Passwords do no match');
+      setMessage("Passwords do no match");
     } else {
       dispatch(updateUserProfile({ id: user._id, name, email, password }));
     }
@@ -134,14 +134,14 @@ const ProfileScreen = ({ history, location }) => {
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)
                     ) : (
-                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                      <i className='fas fa-times' style={{ color: "red" }}></i>
                     )}
                   </td>
                   <td>
                     {order.isDelivered ? (
-                      order.dileveredAt.substring(0, 10)
+                      order.deliveredAt.substring(0, 10)
                     ) : (
-                      <i className='fas fa-times' style={{ color: 'red' }}></i>
+                      <i className='fas fa-times' style={{ color: "red" }}></i>
                     )}
                   </td>
                   <td>
