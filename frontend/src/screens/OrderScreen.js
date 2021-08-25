@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
-import CheckoutProgress from "../components/CheckoutProgress";
 import {
   getOrderDetails,
   payOrder,
@@ -19,7 +18,6 @@ import { PayPalButton } from "react-paypal-button-v2";
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
-  console.log(orderId);
 
   const [sdkReady, setSdkReady] = useState(false);
   const dispatch = useDispatch();
@@ -76,7 +74,6 @@ const OrderScreen = ({ match, history }) => {
   }, [dispatch, orderId, successPay, order, successDeliver, userInfo, history]);
 
   const successPaymentHandler = (paymentResult) => {
-    console.log(paymentResult);
     dispatch(payOrder(orderId, paymentResult));
   };
 

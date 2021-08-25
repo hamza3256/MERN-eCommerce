@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Form, Button, Row, Col } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { saveShippingAddress } from '../actions/cartAction';
-import FormContainer from '../components/FormContainer';
-import CheckoutProgress from '../components/CheckoutProgress';
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { saveShippingAddress } from "../actions/cartAction";
+import FormContainer from "../components/FormContainer";
+import CheckoutProgress from "../components/CheckoutProgress";
 
 const ShippingScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
@@ -19,7 +19,7 @@ const ShippingScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShippingAddress({ address, city, postcode, country }));
-    history.push('/payment');
+    history.push("/payment");
   };
   return (
     <FormContainer>
