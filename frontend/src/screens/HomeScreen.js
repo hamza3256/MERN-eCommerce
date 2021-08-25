@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Product from "../components/Product";
 import Loader from "../components/Loader";
 import Message from "../components/Message";
@@ -7,6 +8,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Paginate from "../components/Paginate";
 import TopProductCarousel from "../components/TopProductCarousel";
+import { Helmet } from "react-helmet";
+import Meta from "../components/Meta";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
@@ -23,7 +26,12 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      {!keyword && <TopProductCarousel />}
+      <Meta />
+      {!keyword ? (
+        <TopProductCarousel />
+      ) : (
+        <Link to='/' className='btn btn-light'></Link>
+      )}
       <h1>Latest Products</h1>
       {loading ? (
         <Loader />
