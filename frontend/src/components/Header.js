@@ -22,10 +22,9 @@ const Header = () => {
             <Navbar.Brand>
               <img
                 src={process.env.PUBLIC_URL + "/AJ-icon.jpeg"}
-                width='30'
-                height='30'
+                width='60'
+                height='60'
                 className='d-inline-block align-top'
-                alt='React Bootstrap logo'
               />
             </Navbar.Brand>
           </LinkContainer>
