@@ -5,6 +5,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../actions/userActions";
 import Search from "./Search";
+import "../index";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -16,21 +17,24 @@ const Header = () => {
   };
   return (
     <header>
-      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+      <Navbar className='color-nav' variant='dark' expand='lg' collapseOnSelect>
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              <img
-                src={process.env.PUBLIC_URL + "/AJ-icon.jpeg"}
-                width='60'
-                height='60'
-                className='d-inline-block align-top'
-              />
+              {
+                <img
+                  src={process.env.PUBLIC_URL + "/cover.png"}
+                  width='150'
+                  className='d-inline-block align-top'
+                />
+              }
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Route render={({ history }) => <Search history={history} />} />
+            <Nav className='ms-auto'>
+              <Route render={({ history }) => <Search history={history} />} />
+            </Nav>
             <Nav className='ms-auto'>
               <LinkContainer to='/cart'>
                 <Nav.Link>

@@ -5,6 +5,7 @@ import Loader from "./Loader";
 import Message from "./Message";
 import { useDispatch, useSelector } from "react-redux";
 import { listTopProducts } from "../actions/productActions";
+import "../index";
 
 const TopProductCarousel = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const TopProductCarousel = () => {
   ) : error ? (
     <Message variant='danger'>{error}</Message>
   ) : (
-    <Carousel pause='hover' className='bg-dark'>
+    <Carousel pause='hover' className='color-nav'>
       {products.map((product) => (
         <Carousel.Item key={product._id}>
           <Link to={`/product/${product._id}`}>

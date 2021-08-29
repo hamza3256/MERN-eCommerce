@@ -1,7 +1,7 @@
-import React from 'react';
-import { Card } from 'react-bootstrap';
-import Rating from './Rating';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Card } from "react-bootstrap";
+import Rating from "./Rating";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
   return (
@@ -11,7 +11,10 @@ const Product = ({ product }) => {
       </Link>
 
       <Card.Body>
-        <Link to={`/product/${product._id}`}>
+        <Link
+          to={`/product/${product._id}`}
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Title as='div'>
             <strong>{product.name}</strong>
           </Card.Title>
