@@ -26,6 +26,7 @@ const Header = () => {
                   src={process.env.PUBLIC_URL + "/cover.png"}
                   width='150'
                   className='d-inline-block align-top'
+                  alt=''
                 />
               }
             </Navbar.Brand>
