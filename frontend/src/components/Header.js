@@ -23,7 +23,7 @@ const Header = () => {
             <Navbar.Brand>
               {
                 <img
-                  src={process.env.PUBLIC_URL + "/cover.png"}
+                  src={process.env.PUBLIC_URL + "/cover1.png"}
                   width='150'
                   className='d-inline-block align-top'
                   alt=''
@@ -33,7 +33,7 @@ const Header = () => {
           </LinkContainer>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='ms-auto'>
+            <Nav>
               <Route render={({ history }) => <Search history={history} />} />
             </Nav>
             <Nav className='ms-auto'>
