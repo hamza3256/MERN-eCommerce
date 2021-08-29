@@ -13,19 +13,20 @@ const Search = ({ history }) => {
     }
   };
   return (
-    <Form onSubmit={submitHandler} inline>
+    <Form onSubmit={submitHandler} className='d-flex' inline>
       <Form.Control
         type='text'
         name='q'
         onChange={(e) => setKeyword(e.target.value)}
         placeholder='Search products'
         className='mr-sm-2 ml-sm-5'
-      ></Form.Control>
+        aria-label='Search'
+      />
       <Button
         type='submit'
-        variant='outline-success'
-        className='p-2
-    '
+        variant='outline-light'
+        className='p-2'
+        style={{ borderRadius: "5px" }}
       >
         Search
       </Button>
