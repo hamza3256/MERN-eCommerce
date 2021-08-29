@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 import {
   createProduct,
   deleteProduct,
-  listProducts,
+  listProductsForAdmin,
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 import Paginate from "../components/Paginate";
@@ -38,16 +38,18 @@ const ProductListScreen = ({ history, match }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
+  console.log(userInfo);
+
   useEffect(() => {
     dispatch({ type: PRODUCT_CREATE_RESET });
 
-    if (!userInfo.isAdmin) {
+    if (!userInfo || !userInfo.isAdmin) {
       history.push("/login");
     }
     if (successCreate) {
       history.push(`/admin/product/${createdProduct._id}/edit`);
     } else {
-      dispatch(listProducts("", pageNumber));
+      dispatch(listProductsForAdmin("", pageNumber));
     }
   }, [
     dispatch,
