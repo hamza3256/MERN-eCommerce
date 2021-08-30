@@ -97,7 +97,10 @@ const PlaceOrderScreen = ({ history }) => {
                           />
                         </Col>
                         <Col>
-                          <Link to={`/product/${item.product}`}>
+                          <Link
+                            to={`/product/${item.product}`}
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
                             {item.name}
                           </Link>
                         </Col>
@@ -149,6 +152,7 @@ const PlaceOrderScreen = ({ history }) => {
                 <Button
                   type='button'
                   className='btn-block'
+                  variant='dark'
                   disabled={cart.cartItems === 0}
                   onClick={placeOrderHandler}
                 >

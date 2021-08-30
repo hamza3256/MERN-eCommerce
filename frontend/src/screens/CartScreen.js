@@ -54,7 +54,12 @@ const CartScreen = ({ match, location, history }) => {
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
                   <Col md={3}>
-                    <Link to={`/product/${item.product}`}>{item.name}</Link>
+                    <Link
+                      to={`/product/${item.product}`}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      {item.name}
+                    </Link>
                   </Col>
                   <Col md={2}>£{item.price}</Col>
                   <Col md={2}>
@@ -106,10 +111,11 @@ const CartScreen = ({ match, location, history }) => {
               <Button
                 type='button'
                 className='btn-block'
+                variant='dark'
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To Checkout
+                Go To Checkout
               </Button>
             </ListGroup.Item>
           </ListGroup>
