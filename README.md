@@ -1,1 +1,1 @@
-[Live Demo](adamjeemart.herokuapp.com)
+[Live Demo](https://adamjeemart.herokuapp.com/)
