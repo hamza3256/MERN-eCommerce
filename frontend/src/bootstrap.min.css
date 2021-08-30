@@ -33,7 +33,7 @@
   --bs-gray-600: #6c757d;
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
-  --bs-gray-900: ##2b282c;
+  --bs-gray-900: #2b282c;
   --bs-primary: #3459e6;
   --bs-secondary: #fff;
   --bs-success: #2fb380;
@@ -41,7 +41,7 @@
   --bs-warning: #f4bd61;
   --bs-danger: #da292e;
   --bs-light: #f8f9fa;
-  --bs-dark: ##2b282c;
+  --bs-dark: #2b282c;
   --bs-primary-rgb: 52, 89, 230;
   --bs-secondary-rgb: 255, 255, 255;
   --bs-success-rgb: 47, 179, 128;
@@ -282,7 +282,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
   color: #fff;
-  background-color: ##2b282c;
+  background-color: #2b282c;
   border-radius: 0.2rem;
 }
 kbd kbd {
@@ -1908,7 +1908,7 @@ progress {
   border-color: #dfe0e1;
 }
 .table-dark {
-  --bs-table-bg: ##2b282c;
+  --bs-table-bg: #2b282c;
   --bs-table-striped-bg: #2c3034;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #373b3e;
@@ -3144,8 +3144,8 @@ fieldset:disabled .btn {
 }
 .btn-dark {
   color: #fff;
-  background-color: ##2b282c;
-  border-color: ##2b282c;
+  background-color: #2b282c;
+  border-color: #2b282c;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .btn-dark:hover {
@@ -3179,8 +3179,8 @@ fieldset:disabled .btn {
 .btn-dark.disabled,
 .btn-dark:disabled {
   color: #fff;
-  background-color: ##2b282c;
-  border-color: ##2b282c;
+  background-color: #2b282c;
+  border-color: #2b282c;
 }
 .btn-outline-primary {
   color: #3459e6;
@@ -3428,13 +3428,13 @@ fieldset:disabled .btn {
   background-color: transparent;
 }
 .btn-outline-dark {
-  color: ##2b282c;
-  border-color: ##2b282c;
+  color: #2b282c;
+  border-color: #2b282c;
 }
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: ##2b282c;
-  border-color: ##2b282c;
+  background-color: #2b282c;
+  border-color: #2b282c;
 }
 .btn-check:focus + .btn-outline-dark,
 .btn-outline-dark:focus {
@@ -3446,8 +3446,8 @@ fieldset:disabled .btn {
 .btn-outline-dark.dropdown-toggle.show,
 .btn-outline-dark:active {
   color: #fff;
-  background-color: ##2b282c;
-  border-color: ##2b282c;
+  background-color: #2b282c;
+  border-color: #2b282c;
 }
 .btn-check:active + .btn-outline-dark:focus,
 .btn-check:checked + .btn-outline-dark:focus,
@@ -3458,7 +3458,7 @@ fieldset:disabled .btn {
 }
 .btn-outline-dark.disabled,
 .btn-outline-dark:disabled {
-  color: ##2b282c;
+  color: #2b282c;
   background-color: transparent;
 }
 .btn-link {
@@ -3742,7 +3742,7 @@ fieldset:disabled .btn {
   padding: 0.5rem 1rem;
   clear: both;
   font-weight: 400;
-  color: ##2b282c;
+  color: #2b282c;
   text-align: inherit;
   text-decoration: none;
   white-space: nowrap;
@@ -3780,7 +3780,7 @@ fieldset:disabled .btn {
 .dropdown-item-text {
   display: block;
   padding: 0.5rem 1rem;
-  color: ##2b282c;
+  color: #2b282c;
 }
 .dropdown-menu-dark {
   color: #dee2e6;
@@ -5128,7 +5128,7 @@ fieldset:disabled .btn {
   position: relative;
   display: block;
   padding: 1rem 1.5rem;
-  color: ##2b282c;
+  color: #2b282c;
   text-decoration: none;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.125);
@@ -5498,7 +5498,7 @@ fieldset:disabled .btn {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem 0.75rem;
-  color: ##2b282c;
+  color: #2b282c;
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -6036,7 +6036,7 @@ fieldset:disabled .btn {
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 1rem;
-  color: ##2b282c;
+  color: #2b282c;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top-left-radius: calc(0.3rem - 1px);
@@ -6537,7 +6537,7 @@ fieldset:disabled .btn {
   color: #f9fafb;
 }
 .link-dark {
-  color: ##2b282c;
+  color: #2b282c;
 }
 .link-dark:focus,
 .link-dark:hover {
@@ -6900,7 +6900,7 @@ fieldset:disabled .btn {
   border-color: #f8f9fa !important;
 }
 .border-dark {
-  border-color: ##2b282c !important;
+  border-color: #2b282c !important;
 }
 .border-white {
   border-color: #fff !important;
@@ -10544,7 +10544,7 @@ fieldset:disabled .btn {
 .btn-outline-light,
 .btn-outline-secondary,
 .btn-secondary {
-  color: ##2b282c;
+  color: #2b282c;
 }
 .btn-light.disabled,
 .btn-light:disabled,
@@ -10629,7 +10629,7 @@ thead th {
 }
 .badge.bg-light,
 .badge.bg-secondary {
-  color: ##2b282c;
+  color: #2b282c;
 }
 .list-group {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
