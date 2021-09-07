@@ -5,7 +5,7 @@ import Product from "../models/productModel.js";
 // @route GET /api/products
 // @access Public
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = 5;
+  const pageSize = 8;
   const page = Number(req.query.pageNumber) || 1;
 
   const keyword = req.query.keyword
@@ -123,6 +123,8 @@ const createProductReview = asyncHandler(async (req, res) => {
     };
 
     product.reviews.push(review);
+
+    product.numReviews = product.reviews.length;
 
     product.rating =
       product.reviews.reduce((acc, item) => item.rating + acc, 0) /
