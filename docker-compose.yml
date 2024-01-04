@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: mern-ecommerce
+    image: mern-ecommerce-image
+    env_file:
+      - .env
+    build: 
+      context: .
+    ports:
+      - 3000:3000
