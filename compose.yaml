@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: esu-container
+    image: esu-image
+    env_file:
+      - .env
+    build: 
+      context: .
+    ports:
+      - 127.0.0.1:3000:3000
