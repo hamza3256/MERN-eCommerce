@@ -23,8 +23,8 @@ const Header = () => {
             <Navbar.Brand>
               {
                 <img
-                  src={process.env.PUBLIC_URL + "/cover1.png"}
-                  width='150'
+                  src={process.env.PUBLIC_URL + "/cover2.png"}
+                  width='100'
                   className='d-inline-block align-top'
                   alt=''
                 />

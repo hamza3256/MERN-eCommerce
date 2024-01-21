@@ -12,7 +12,7 @@
     "data:import": "node backend/seeder",
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
-    "install-both": "npm install --prefix frontend && npm install nodemon && npm install concurrently && npm run data:import"
+    "install-both": "npm install --prefix frontend && npm install nodemon && npm install concurrently && node backend/seeder"
   },
   "repository": {
     "type": "git",
