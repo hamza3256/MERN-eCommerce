@@ -1,0 +1,51 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "MERN ECommerce Website for 'AdamJee Mart'",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "install-both": "npm install --prefix frontend && npm install nodemon && npm install concurrently && node backend/seeder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamza3256/MERN-eCommerce.git"
+  },
+  "keywords": [
+    "AdamJee",
+    "Mart",
+    "Muhammad",
+    "Hamza",
+    "eCommerce",
+    "MERN"
+  ],
+  "author": "Muhammad Hamza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamza3256/MERN-eCommerce/issues"
+  },
+  "homepage": "https://github.com/hamza3256/MERN-eCommerce#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.9",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  }
+}
