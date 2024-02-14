@@ -1,7 +1,7 @@
 {
   "name": "mern-ecommerce",
   "version": "1.0.0",
-  "description": "MERN ECommerce Website for 'AdamJee Mart'",
+  "description": "ESU STORE'",
   "main": "server.js",
   "type": "module",
   "scripts": {
